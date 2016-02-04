@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '~> 3.2.13'
 gem 'rack'
 gem 'ransack'
 gem 'carrierwave'
@@ -18,7 +18,7 @@ gem 'devise', '~> 2.2.1'
 
 group :test, :development do
   gem 'thin'
-  gem "rspec-rails", '~> 3.4.0'
+  gem "rspec-rails", '~> 3.4'
   gem 'rspec-activemodel-mocks' # TODO: remove if we no longer need mock_model or stub_model
   gem "factory_girl_rails", "~> 4.0"
   gem "capybara"
@@ -31,7 +31,7 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-  gem 'database_cleaner', '1.0.1'
+  gem 'database_cleaner', '~> 1.0'
   gem 'test-unit'
   gem 'poltergeist'
   gem 'pry'
@@ -46,8 +46,8 @@ group :assets do
   # in production environments by default.
   gem 'jquery-rails'
 
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 3.2'
+  gem 'coffee-rails', '~> 3.2'
   #The following provides the stylinmg for the datatables, among other things
   gem 'jquery-ui-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -55,12 +55,12 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
-  gem 'bootstrap-sass', '~> 2.0.4.1'
+  gem 'bootstrap-sass'
   gem 'chosen-rails'
 end
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
