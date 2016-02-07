@@ -101,11 +101,6 @@ ActiveRecord::Schema.define(:version => 20160115231033) do
     t.string   "id_code"
   end
 
-  create_table "foos", :force => true do |t|
-    t.string "bar"
-    t.string "baz"
-  end
-
   create_table "helpdocs", :force => true do |t|
     t.string   "title"
     t.text     "contents"
