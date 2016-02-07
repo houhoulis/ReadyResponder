@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160207223015) do
+ActiveRecord::Schema.define(:version => 20160115231033) do
 
   create_table "activities", :force => true do |t|
     t.string   "content"
@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(:version => 20160207223015) do
     t.string   "loggable_type"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
-  end
-
-  create_table "blogs", :force => true do |t|
-    t.string   "author"
-    t.text     "post"
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "certs", :force => true do |t|
