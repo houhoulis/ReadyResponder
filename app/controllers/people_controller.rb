@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter :set_return_path
+  before_action :authenticate_user!
+  before_action :set_return_path
   authorize_resource
 
   def signin

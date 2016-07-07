@@ -1,8 +1,8 @@
-class Timecard < ActiveRecord::Base
+class Timecard < ApplicationRecord
   before_save :pull_defaults_from_event
   before_save :calc_durations
-  attr_accessible :intention, :intended_start_time, :intended_end_time, 
-                  :outcome, :actual_start_time, :actual_end_time, :event_id, :person_id, :category, :description
+  # attr_accessible :intention, :intended_start_time, :intended_end_time,
+                  # :outcome, :actual_start_time, :actual_end_time, :event_id, :person_id, :category, :description
 
   belongs_to :person
   belongs_to :event

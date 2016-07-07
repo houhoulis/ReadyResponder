@@ -1,5 +1,5 @@
-class ResourceType < ActiveRecord::Base
-  attr_accessible :description, :fema_code, :fema_kind, :name, :status
+class ResourceType < ApplicationRecord
+  # attr_accessible :description, :fema_code, :fema_kind, :name, :status
   has_many :items
 
   validates_presence_of :status

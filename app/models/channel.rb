@@ -1,4 +1,4 @@
-class Channel < ActiveRecord::Base
+class Channel < ApplicationRecord
   belongs_to :person
 
   USAGES = ['1-All','2-Emergency Only','3-Info Only','4-Testing']

@@ -1,7 +1,7 @@
-class Repair < ActiveRecord::Base
-  attr_accessible :category, :comments, :description,
-                  :item_id, :person_id, :service_date,
-                  :status, :user_id, :cost
+class Repair < ApplicationRecord
+  # attr_accessible :category, :comments, :description,
+  #                 :item_id, :person_id, :service_date,
+  #                 :status, :user_id, :cost
   belongs_to :item
   belongs_to :person
   validates_numericality_of :cost

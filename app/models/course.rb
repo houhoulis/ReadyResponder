@@ -1,5 +1,4 @@
-class Course < ActiveRecord::Base
-  attr_accessible :category, :comments, :description, :duration, :status, :term, :name, :skill_ids
+class Course < ApplicationRecord
   has_many :certs
   has_many :people, :through => :certs
   has_many :events, :through => :certs

@@ -1,5 +1,4 @@
-class Cert < ActiveRecord::Base
-  attr_accessible :category, :person_id, :course_id, :expiration_date, :issued_date, :cert_number, :level,  :status, :certification, :comments
+class Cert < ApplicationRecord
   belongs_to :person
   belongs_to :course
   mount_uploader :certification, CertificationUploader

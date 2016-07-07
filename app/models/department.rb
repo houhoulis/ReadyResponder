@@ -1,5 +1,4 @@
-class Department < ActiveRecord::Base
-  attr_accessible :contact_id, :description, :name, :status
+class Department < ApplicationRecord
   belongs_to :contact, class_name: "Person"
   has_many :people
   has_many :items

@@ -37,7 +37,7 @@ describe HelpdocsController do
   describe "GET index" do
     it "assigns all helpdocs as @helpdocs" do
       helpdoc = Helpdoc.create! valid_attributes
-      get :index, {}, valid_session
+      process :index, method :get, {}, valid_session
       expect(assigns(:helpdocs)).to eq([helpdoc])
     end
   end
@@ -45,14 +45,14 @@ describe HelpdocsController do
   describe "GET show" do
     it "assigns the requested helpdoc as @helpdoc" do
       helpdoc = Helpdoc.create! valid_attributes
-      get :show, {:id => helpdoc.to_param}, valid_session
+      process :show, method :get, {:id => helpdoc.to_param}, valid_session
       expect(assigns(:helpdoc)).to eq(helpdoc)
     end
   end
 
   describe "GET new" do
     it "assigns a new helpdoc as @helpdoc" do
-      get :new, {}, valid_session
+      process :new, method :get, {}, valid_session
       expect(assigns(:helpdoc)).to be_a_new(Helpdoc)
     end
   end
@@ -60,7 +60,7 @@ describe HelpdocsController do
   describe "GET edit" do
     it "assigns the requested helpdoc as @helpdoc" do
       helpdoc = Helpdoc.create! valid_attributes
-      get :edit, {:id => helpdoc.to_param}, valid_session
+      process :edit, method :get, {:id => helpdoc.to_param}, valid_session
       expect(assigns(:helpdoc)).to eq(helpdoc)
     end
   end
@@ -69,18 +69,18 @@ describe HelpdocsController do
     describe "with valid params" do
       it "creates a new Helpdoc" do
         expect {
-          post :create, {:helpdoc => valid_attributes}, valid_session
+          process :create, method :post, {:helpdoc => valid_attributes}, valid_session
         }.to change(Helpdoc, :count).by(1)
       end
 
       it "assigns a newly created helpdoc as @helpdoc" do
-        post :create, {:helpdoc => valid_attributes}, valid_session
+        process :create, method :post, {:helpdoc => valid_attributes}, valid_session
         expect(assigns(:helpdoc)).to be_a(Helpdoc)
         expect(assigns(:helpdoc)).to be_persisted
       end
 
       it "redirects to the created helpdoc" do
-        post :create, {:helpdoc => valid_attributes}, valid_session
+        process :create, method :post, {:helpdoc => valid_attributes}, valid_session
         expect(response).to redirect_to(Helpdoc.last)
       end
     end
@@ -89,14 +89,14 @@ describe HelpdocsController do
       it "assigns a newly created but unsaved helpdoc as @helpdoc" do
         # Trigger the behavior that occurs when invalid params are submitted
         allow_any_instance_of(Helpdoc).to receive(:save).and_return(false)
-        post :create, {:helpdoc => { "title" => "invalid value" }}, valid_session
+        process :create, method :post, {:helpdoc => { "title" => "invalid value" }}, valid_session
         expect(assigns(:helpdoc)).to be_a_new(Helpdoc)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         allow_any_instance_of(Helpdoc).to receive(:save).and_return(false)
-        post :create, {:helpdoc => { "title" => "invalid value" }}, valid_session
+        process :create, method :post, {:helpdoc => { "title" => "invalid value" }}, valid_session
         expect(response).to render_template("new")
       end
     end

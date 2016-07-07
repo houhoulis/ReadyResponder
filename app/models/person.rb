@@ -1,4 +1,4 @@
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   include ActiveModel::ForbiddenAttributesProtection
   before_save :title_order
 
