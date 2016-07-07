@@ -94,12 +94,13 @@ class Person < ApplicationRecord
 
   def self.search(search)
     if search
-      find :all, :conditions => ['firstname LIKE ? OR lastname LIKE ? OR city LIKE ? OR icsid like ?',
-        "%#{search}%","%#{search}%","%#{search}%","%#{search}%"],
-        :order => 'division1, division2,title_order, start_date ASC'
+      matcher = "%#{search}%"
+      query = where 'firstname LIKE ? OR lastname LIKE ? OR city LIKE ? OR icsid like ?',
+                    matcher, matcher, matcher, matcher
     else
-      find :all, :order => 'division1, division2,title_order, start_date ASC'
+      query = scoped
     end
+    query.order division1: :asc, division2: :asc, title_order: :asc, start_date: :asc
   end
 
   def age
