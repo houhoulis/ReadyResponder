@@ -2,10 +2,10 @@ class Person < ApplicationRecord
   include ActiveModel::ForbiddenAttributesProtection
   before_save :title_order
 
-  has_many :certs, conditions: ->(_) { { "certs.status" => "Active" } }
+  has_many :certs, -> { where status: "Active" }
   has_many :channels
-  has_many :phones, order: :priority
-  has_many :emails, order: :priority
+  has_many :phones, -> { order :priority }
+  has_many :emails, -> { order :priority }
   accepts_nested_attributes_for :channels, allow_destroy: true
   accepts_nested_attributes_for :phones, allow_destroy: true
   accepts_nested_attributes_for :emails, allow_destroy: true
