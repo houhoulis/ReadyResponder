@@ -11,7 +11,7 @@ gem 'geocoder'
 gem 'cancan'
 
 #Handles authentication
-gem 'devise', '>= 2.2.1'
+gem 'devise', '~> 4.2.0'
 
 group :test, :development do
   gem 'thin'
@@ -53,20 +53,20 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '~> 3.0'
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
-  gem 'bootstrap-sass', '>= 2.0.4.1'
+  gem 'bootstrap-sass', '~> 3.3.6'
   gem 'chosen-rails'
 end
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '>= 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.5'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 group :production do
   # Use unicorn as the app server
-  gem 'unicorn'
+  gem 'unicorn', '~> 5.1.0'
 end
 
 # Deploy with Capistrano
