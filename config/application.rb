@@ -16,9 +16,6 @@ module ReadyResponder
     # but that's not a big problem
     config.filter_parameters << :value
 
-    # load service objects
-    config.autoload_paths << Rails.root.join('services')
-
     config.assets.precompile += %w(*.js)
 
     # Load modules located in the lib directory
