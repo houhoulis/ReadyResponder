@@ -3,16 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.10'
 
 gem 'rack'
-gem 'ransack', '~> 1.8.6'
+gem 'ransack', '> 1.8.6'
 gem 'carrierwave'
-gem "pg", "~> 0.21"
+gem "pg"
 gem 'rmagick', '~> 2.15.4'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'geocoder'
 gem 'cancancan'
-#gem "taps"
-#gem 'validates_timeliness', '~> 3.0'
 
 gem 'rqrcode'
 gem 'vcardigan'
@@ -25,10 +23,10 @@ source 'https://rails-assets.org' do
 end
 
 # Handles text messages and voice calls
-gem 'twilio-ruby', '~> 4.11.1'
+gem 'twilio-ruby'
 
 #Handles authentication
-gem 'devise', '~> 3.0'
+gem 'devise'
 
 # For model versioning
 gem 'paper_trail'
@@ -38,13 +36,12 @@ gem 'cocoon'
 
 group :test, :development do
   gem 'thin'
-  gem "rspec-rails", '~> 3.7'
-  # gem 'rspec-activemodel-mocks' # TODO: remove if we no longer need mock_model or stub_model
+  gem "rspec-rails"
   gem "factory_girl_rails"
   gem "capybara"
   # Use selenium and chrome for handling JS automated testing
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper', '1.0.0'
+  gem 'chromedriver-helper', '> 1.0.0'
   gem "guard-rspec", require: false
   gem 'guard-livereload'
   gem "mailcatcher"
@@ -53,7 +50,7 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-  gem 'database_cleaner', '1.0.1'
+  gem 'database_cleaner'
   gem 'test-unit'
   gem 'pry'
 
@@ -63,7 +60,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
+  gem 'web-console'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -91,7 +88,7 @@ group :test do
 end
 
 gem 'sass-rails'
-gem 'uglifier', '>= 1.0.3'
+gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -102,20 +99,14 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
-
-# # Deploy with Capistrano
-# gem 'capistrano', '~> 2.15'
-# # This is used by Capistrano, but 2.8 has issues
-# gem "net-ssh", "~> 2.7.0"
+gem 'bcrypt-ruby', '> 3.0.0'
 
 gem 'jquery-ui-rails'
-gem 'bootstrap-sass', '3.3.7'
-# gem 'chosen-rails'
+gem 'bootstrap-sass'
 
 gem 'protected_attributes'
