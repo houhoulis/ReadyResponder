@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2.7'
+gem 'rails', '~> 4.2.7', '>= 4.2.7.1'
 
 gem 'rack'
 gem 'ransack'
@@ -90,7 +90,7 @@ group :test do
   gem 'timecop'
 end
 
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.6'
 gem 'uglifier', '>= 1.0.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
