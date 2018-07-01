@@ -44,10 +44,10 @@ group :test, :development do
   gem "factory_girl_rails"
   gem "capybara"
   # Use selenium and chrome for handling JS automated testing
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '>= 3.5.2'
   gem 'chromedriver-helper', '1.0.0'
-  gem "guard-rspec", require: false
-  gem 'guard-livereload'
+  gem "guard-rspec", ">= 4.7.3", require: false
+  gem 'guard-livereload', '>= 2.5.2'
   gem "launchy"
   gem "letter_opener"
   gem 'better_errors'
