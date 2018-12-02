@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 
 # This is needed until upstream projects update their gemspecs
 # This avoids a vulnerability in 3.7.1
