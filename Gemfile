@@ -32,7 +32,7 @@ end
 gem 'twilio-ruby', '~> 4.11.1'
 
 #Handles authentication
-gem 'devise', '~> 4.4.3'
+gem 'devise', '~> 4.6.0'
 
 # For model versioning
 gem 'paper_trail'
