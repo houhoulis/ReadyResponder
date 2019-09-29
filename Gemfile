@@ -48,7 +48,7 @@ group :test, :development do
   gem "factory_bot_rails", "~> 4.0"
   gem 'capybara'
   # Use selenium and chrome for handling JS automated testing
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '>= 3.14.0'
   gem 'chromedriver-helper', '1.0.0'
   gem 'guard-rspec', require: false
   gem 'guard-livereload'
