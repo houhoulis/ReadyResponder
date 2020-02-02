@@ -142,7 +142,7 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.25)
     formatador (0.2.5)
-    geocoder (1.4.7)
+    geocoder (1.6.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     guard (2.14.2)
@@ -423,7 +423,7 @@ DEPENDENCIES
   devise (~> 4.4.3)
   dotenv-rails
   factory_bot_rails (~> 4.0)
-  geocoder
+  geocoder (>= 1.6.1)
   guard-livereload
   guard-rspec
   jbuilder (~> 2.0)
@@ -467,4 +467,4 @@ DEPENDENCIES
   web-console (~> 3.0)
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
