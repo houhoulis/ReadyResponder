@@ -7,11 +7,11 @@ gem 'rails', '~> 5.2.0'
 gem 'sprockets', '3.7.2'
 
 gem 'rack'
-gem 'ransack'
+gem 'ransack', '>= 1.8.8'
 gem 'carrierwave'
 gem 'pg', '~> 1.0.0'
 gem 'rmagick', '~> 2.15.4'
-gem 'simple_form', '~> 5.0.0'
+gem 'simple_form', '~> 5.0.1'
 gem 'redcarpet'
 gem 'geocoder'
 gem 'cancancan'
@@ -20,7 +20,7 @@ gem 'rqrcode'
 gem 'vcardigan'
 
 gem 'therubyracer'
-gem 'jquery-turbolinks'
+gem 'jquery-turbolinks', '>= 2.1.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-datetimepicker'
@@ -39,21 +39,21 @@ gem 'paper_trail'
 gem 'cocoon'
 
 group :test, :development do
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.4.0'
   gem 'thin'
-  gem 'rspec-rails'
-  gem "factory_bot_rails", "~> 4.0"
-  gem 'capybara'
+  gem 'rspec-rails', '>= 3.7.2'
+  gem "factory_bot_rails", "~> 4.8", ">= 4.8.2"
+  gem 'capybara', '>= 3.0.2'
   # Use selenium and chrome for handling JS automated testing
   gem 'selenium-webdriver'
-  gem 'webdrivers', '~> 4.0'
+  gem 'webdrivers', '~> 4.1', '>= 4.1.2'
   gem 'guard-rspec', require: false
   gem 'guard-livereload'
   gem 'launchy'
   gem 'letter_opener'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'meta_request'
+  gem 'meta_request', '>= 0.6.0'
   gem 'database_cleaner', '1.0.1'
   gem 'test-unit'
   gem 'pry'
@@ -63,13 +63,13 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
+  gem 'web-console', '~> 3.6', '>= 3.6.1'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
   # Use Capistrano for deployment
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '>= 1.3.1'
 
   # Helps you figure out where a piece of the UI is coming from by
   # adding comments to the source code at the begin and end of each template.
@@ -85,18 +85,18 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'puma'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.2'
   # Allows you to freeze time during tests
   gem 'timecop'
 end
 
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.7'
 gem 'uglifier', '>= 1.0.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2.2'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.3.3'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -106,5 +106,5 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '>= 6.0.1'
 gem 'bootstrap-sass', '3.3.7'
