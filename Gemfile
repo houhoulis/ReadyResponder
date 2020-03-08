@@ -84,7 +84,7 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
-  gem 'puma'
+  gem 'puma', '>= 3.12.4'
   gem 'rails-controller-testing'
   # Allows you to freeze time during tests
   gem 'timecop'
