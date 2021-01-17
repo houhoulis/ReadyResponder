@@ -12,7 +12,7 @@ gem 'carrierwave'
 gem 'pg', '~> 1.0.0'
 gem 'rmagick', '~> 2.15.4'
 gem 'simple_form', '~> 5.0.0'
-gem 'redcarpet'
+gem 'redcarpet', '>= 3.5.1'
 gem 'geocoder'
 gem 'cancancan'
 gem 'acts-as-taggable-on', '~> 6.0' #must be this version for Rails5
