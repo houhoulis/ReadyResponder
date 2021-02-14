@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 
 # This is needed until upstream projects update their gemspecs
 # This avoids a vulnerability in 3.7.1
@@ -8,7 +8,7 @@ gem 'sprockets', '3.7.2'
 
 gem 'rack'
 gem 'ransack'
-gem 'carrierwave'
+gem 'carrierwave', '>= 1.3.2'
 gem 'pg', '~> 1.0.0'
 gem 'rmagick', '~> 2.15.4'
 gem 'simple_form', '~> 5.0.0'
