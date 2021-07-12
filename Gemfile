@@ -43,14 +43,14 @@ group :test, :development do
   gem 'thin'
   gem 'rspec-rails'
   gem "factory_bot_rails", "~> 4.0"
-  gem 'capybara'
+  gem 'capybara', '>= 3.0.2'
   # Use selenium and chrome for handling JS automated testing
   gem 'selenium-webdriver'
   gem 'webdrivers', '~> 4.0'
   gem 'guard-rspec', require: false
   gem 'guard-livereload'
-  gem 'launchy'
-  gem 'letter_opener'
+  gem 'launchy', '>= 2.4.3'
+  gem 'letter_opener', '>= 1.6.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
@@ -102,7 +102,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.0.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.0'
